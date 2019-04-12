@@ -16,7 +16,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>org.opendaylight.etcd</groupId>
+  <groupId>org.opendaylight.altds</groupId>
   <artifactId>karaf</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ODL :: ${project.groupId} :: ${project.artifactId}</name>
@@ -28,7 +28,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>${project.groupId}</groupId>
+        <groupId>org.opendaylight.etcd</groupId>
         <artifactId>etcd-artifacts</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
@@ -45,7 +45,7 @@
     </dependency>
 
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>org.opendaylight.etcd</groupId>
       <artifactId>features-etcd</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
