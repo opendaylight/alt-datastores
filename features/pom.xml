@@ -27,6 +27,7 @@
 
   <modules>
     <module>etcd</module>
+    <module>mongodb</module>
   </modules>
 
 </project>

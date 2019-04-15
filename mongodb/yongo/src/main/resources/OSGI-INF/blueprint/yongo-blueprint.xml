@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:odl="http://opendaylight.org/xmlns/blueprint/v1.0.0"
+           odl:restart-dependents-on-updates="false">
+
+  <service ref="yongoDOMDataBroker" interface="org.opendaylight.mdsal.dom.api.DOMDataBroker"
+           odl:type="yongo"/>
+  <service ref="yongoBindingDataBroker" interface="org.opendaylight.mdsal.binding.api.DataBroker"
+           odl:type="yongo"/>
+</blueprint>

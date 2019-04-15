@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.opendaylight.odlparent</groupId>
+        <artifactId>single-feature-parent</artifactId>
+        <version>4.0.9</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.opendaylight.mongodb</groupId>
+    <artifactId>odl-yongo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>feature</packaging>
+
+    <name>OpenDaylight :: alt-datastores :: yongo [Karaf Feature]</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.opendaylight.mdsal</groupId>
+                <artifactId>mdsal-artifacts</artifactId>
+                <version>3.0.6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.yangtools</groupId>
+                <artifactId>yangtools-artifacts</artifactId>
+                <version>2.1.8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.mongodb</groupId>
+                <artifactId>yongo-artifacts</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>yongo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opendaylight.mdsal</groupId>
+            <artifactId>odl-mdsal-binding</artifactId>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.opendaylight.yangtools</groupId>
+            <artifactId>odl-yangtools-codec</artifactId>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <!-- The following dependencies are not needed by etcd, but were provided by the original odl-mdsal-broker (from controller),
+        so in order for this feature to be able to be a valid drop-in replacement, we must offer them as well so users don't break.
+        TODO Find better solution instead of this, of course, hack for a situation that is already a mess.  -->
+        <dependency>
+            <groupId>org.opendaylight.controller</groupId>
+            <artifactId>odl-config-netty</artifactId>
+            <version>0.10.0</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+    </dependencies>
+
+</project>
