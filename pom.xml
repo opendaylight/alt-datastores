@@ -28,6 +28,13 @@
         <maven.install.skip>true</maven.install.skip>
     </properties>
 
+    <scm>
+        <connection>scm:git:ssh://git.opendaylight.org:29418/alt-datastores.git</connection>
+        <developerConnection>scm:git:ssh://git.opendaylight.org:29418/alt-datastores.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://wiki.opendaylight.org/view/alt-datastores:Main</url>
+    </scm>
+
     <modules>
         <module>features</module>
         <module>karaf</module>

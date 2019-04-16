@@ -10,7 +10,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
 
   <parent>
     <groupId>org.opendaylight.odlparent</groupId>
-    <artifactId>odlparent</artifactId>
+    <artifactId>odlparent-lite</artifactId>
     <version>4.0.9</version>
     <relativePath/>
   </parent>
@@ -21,38 +21,17 @@ and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
   <name>mongodb</name> <!-- DO NOT CHANGE - Used by Sonar to set project name -->
   <packaging>pom</packaging>
 
-  <scm>
-    <connection>scm:git:ssh://git.opendaylight.org:29418/alt-datastores.git</connection>
-    <developerConnection>scm:git:ssh://git.opendaylight.org:29418/alt-datastores.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://wiki.opendaylight.org/view/alt-datastores:Main</url>
-  </scm>
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <maven.install.skip>true</maven.install.skip>
+  </properties>
 
   <modules>
     <module>yongo-parent</module>
     <module>yongo</module>
     <module>yongo-example</module>
     <module>artifacts</module>
+    <module>launcher</module>
   </modules>
-
-  <!-- DO NOT install or deploy the repo root pom as it's only needed to initiate a build -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

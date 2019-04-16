@@ -10,6 +10,7 @@ package org.opendaylight.datastore.yongo.impl;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
+import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import javassist.ClassPool;
 import org.junit.After;
@@ -48,8 +49,10 @@ public abstract class AbstractDataStoreTest {
 
         final DOMSchemaService schemaService = mock(DOMSchemaService.class);
         doReturn(schemaContext).when(schemaService).getGlobalContext();
-        domDataBroker = new YongoDOMDataBroker(schemaService, MongoContainer.INSTANCE.getMongoClient(),
-                MongoContainer.INSTANCE.getRSMongoClient());
+
+        domDataBroker = new YongoDOMDataBroker(schemaService,
+                MongoClients.create(Singleton.INSTANCE.getConnecionString()),
+                com.mongodb.reactivestreams.client.MongoClients.create(Singleton.INSTANCE.getConnecionString()));
         dataBroker = new YongoBindingDataBroker(
                 new BindingAdapterFactory(new BindingToNormalizedNodeCodec(loading, registry)),
                 domDataBroker);
