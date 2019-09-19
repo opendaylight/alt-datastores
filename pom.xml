@@ -36,6 +36,7 @@
     </scm>
 
     <modules>
+        <module>common</module>
         <module>features</module>
         <module>karaf</module>
         <module>etcd</module>
