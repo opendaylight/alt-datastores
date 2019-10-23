@@ -80,7 +80,7 @@
         <groupId>io.netty</groupId>
         <artifactId>netty-all</artifactId>
         <!-- If these are updated, the version in features.xml needs to be changed too -->
-        <version>4.1.16.Final</version>
+        <version>4.1.42.Final</version>
       </dependency>
       <dependency>
         <groupId>io.netty</groupId>
