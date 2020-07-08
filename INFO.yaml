@@ -1,0 +1,78 @@
+---
+project: 'alt_datastores'
+project_creation_date: '2019-04-04'
+project_category: ''
+lifecycle_state: 'Incubation'
+project_lead: &odl_alt_datastores_ptl
+    name: 'Michael Vorburger'
+    email: 'mike@vorburger.ch'
+    company: ''
+    id: 'vorburger'
+    timezone: 'Unknown/Unknown'
+primary_contact: *odl_alt_datastores_ptl
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.opendaylight.org/projects/'
+    key: 'alt_datastores'
+mailing_list:
+    type: 'groups.io'
+    url: 'app-dev@lists.opendaylight.org'
+    tag: '[]'
+realtime_discussion:
+    type: 'irc'
+    server: 'freenode.net'
+    channel: '#opendaylight'
+meetings:
+    - type: 'gotomeeting+irc'
+      agenda: 'https://wiki.opendaylight.org'
+      url: ''
+      server: 'freenode.net'
+      channel: '#opendaylight'
+      repeats: ''
+      time: ''
+repositories:
+    - alt-datastores
+committers:
+    - <<: *odl_alt_datastores_ptl
+    - name: 'Anil Belur'
+      email: 'abelur@linuxfoundation.org'
+      company: 'Linux Foundation'
+      id: 'askb'
+      timezone: 'Unknown/Unknown'
+    - name: 'Jie Han'
+      email: 'han.jie@zte.com.cn'
+      company: 'zte'
+      id: 'JieHan2017'
+      timezone: 'Unknown/Unknown'
+    - name: 'Quan Xiong'
+      email: 'xiong.quan@zte.com.cn'
+      company: 'zte.com'
+      id: 'xiongquan'
+      timezone: 'Unknown/Unknown'
+    - name: 'li jiansong'
+      email: 'lijiansong@chinatelecom.cn'
+      company: 'chinatelecom'
+      id: 'lijiansong77'
+      timezone: 'Unknown/Unknown'
+    - name: 'Guobiao Mo'
+      email: 'guobiaomo@chinamobile.com'
+      company: 'chinamobile'
+      id: 'guobiaomo'
+      timezone: 'Unknown/Unknown'
+    - name: 'Zhang Min'
+      email: 'zhangminyj@chinamobile.com'
+      company: 'chinamobile'
+      id: 'zm330'
+      timezone: 'Unknown/Unknown'
+    - name: 'Kaiwen Jin'
+      email: 'jinkaiwen@chinamobile.com'
+      company: 'chinamobile'
+      id: 'kaiwen'
+      timezone: 'Unknown/Unknown'
+tsc:
+    # yamllint disable rule:line-length
+    approval: 'https://lists.opendaylight.org/pipermail/tsc/2019-April/011316.html'
+    changes:
+        - type: ''
+          name: ''
+          link: ''
